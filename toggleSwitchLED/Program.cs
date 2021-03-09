@@ -10,7 +10,6 @@ namespace toggleSwitchLED
         private static int lastChangeTime = 0;
         static void Main(string[] args)
         {
-
             controller.OpenPin(17, PinMode.Output);
             controller.OpenPin(18, PinMode.InputPullUp);
             controller.RegisterCallbackForPinValueChangedEvent(18, PinEventTypes.Rising | PinEventTypes.Falling, OnPinChange);
